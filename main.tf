@@ -7,7 +7,7 @@ resource "kubernetes_namespace" "example" {
 
 resource "kubernetes_deployment" "example" {
   metadata {
-    name = var.deployment_name
+    name      = var.deployment_name
     namespace = kubernetes_namespace.example.metadata[0].name
   }
 
